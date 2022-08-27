@@ -11,7 +11,7 @@ int z = Convert.ToInt32(Console.ReadLine());
 
 Console.Write($"Can a triangle with sides: {x}, {y}, {z}, exist?");
 
-if (x < y + z && y < x + z && z < x + y && x > 0 && y > 0 && z > 0){
+if (x < y + z && y < x + z && z < x + y){
     Console.Write(" -- yes");
 }
 else Console.Write(" -- no");
