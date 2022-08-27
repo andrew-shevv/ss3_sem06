@@ -7,13 +7,19 @@ Console.Write("Input number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 int[] ToBinary(int numDecimal){
-    int size =  ((int)Math.Log2(numDecimal) + 1);
-    int[] numBinary = new int[size];
-    for (int i = size - 1; i >= 0; i--){
-        numBinary[i] = numDecimal % 2;
-        numDecimal /= 2;
+    if (numDecimal > 0){
+        int size =  ((int)Math.Log2(numDecimal) + 1);
+        int[] numBinary = new int[size];
+        for (int i = size - 1; i >= 0; i--){
+            numBinary[i] = numDecimal % 2;
+            numDecimal /= 2;
+        }
+        return numBinary;
     }
-    return numBinary;
+    else {
+        int[] zeroVal = {0};
+        return zeroVal;
+    }
 }
 
 int[] binaryAlley = ToBinary(num);
