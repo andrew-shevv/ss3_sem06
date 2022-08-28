@@ -15,8 +15,15 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
-double x = (b2 - b1) / (k1 - k2);
-
-double y = k2 * x + b2;
-
-Console.Write($"({x}; {y})");
+if (b2 == b1 && k1 == k2) {
+    Console.WriteLine("The lines are exactly matching");
+}
+else if (k1 == k2){
+    Console.WriteLine("The lines are parallel");
+}
+else {
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k2 * x + b2;
+    
+    Console.Write($"({x}; {y})");
+}
